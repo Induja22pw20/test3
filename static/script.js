@@ -21,12 +21,28 @@ function getWeather() {
                 <thead>
                     <tr><th><p>Condition</p></th>
                     <th><p>Temperature</p></th>
-                    <th><p>Humidity</p></th></tr>
+                    <th><p>Humidity</p></th>
+                    <th><p>Pressure</p></th></tr>
                 </thead>
                 <tbody>
                     <tr><td><p>${data.description}</p></td>
                     <td><p>${data.temperature}°C</p></td>
-                    <td><p>${data.humidity}%</p></td></tr>
+                    <td><p>${data.humidity} g/m3</p></td>
+                    <td><p>${data.pressure}</p></td></tr>
+                </tbody>
+                
+            </table>
+            <h3>Prediction</h3>
+            <table>
+                <thead>
+                <tr>
+                    <th><p>Sea level</p></th>
+                    <th><p>Wind storm</p></th></tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><p>${data.sealevel}</p></td>
+                    <td><p>${data.wind}</p></td></tr>
                 </tbody>
                 
             </table>
