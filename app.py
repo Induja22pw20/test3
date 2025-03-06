@@ -31,7 +31,11 @@ def get_weather():
         "city": data["name"],
         "temperature": data["main"]["temp"],
         "humidity": data["main"]["humidity"],
-        "description": data["weather"][0]["description"].capitalize()
+        "pressure":data["main"]["pressure"],
+        "sealevel":data["main"]["sea_level"],
+        "wind":data["wind"]["speed"],
+        "description": data["weather"]["description"].capitalize()
+        
     }
     return jsonify(weather_data)
 
