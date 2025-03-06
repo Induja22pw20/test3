@@ -16,10 +16,20 @@ function getWeather() {
             document.getElementById("weather-result").innerHTML = `<p style="color: red;">${data.error}</p>`;
         } else {
             document.getElementById("weather-result").innerHTML = `
-                <h3>${data.city}</h3>
-                <p>Temperature: ${data.temperature}°C</p>
-                <p>Humidity: ${data.humidity}%</p>
-                <p>Condition: ${data.description}</p>
+            <h3>City name:${data.city}</h3>
+            <table>
+                <thead>
+                    <tr><th><p>Condition</p></th>
+                    <th><p>Temperature</p></th>
+                    <th><p>Humidity</p></th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><p>${data.description}</p></td>
+                    <td><p>${data.temperature}°C</p></td>
+                    <td><p>${data.humidity}%</p></td></tr>
+                </tbody>
+                
+            </table>
             `;
         }
     })
